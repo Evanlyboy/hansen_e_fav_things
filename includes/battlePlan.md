@@ -18,8 +18,15 @@
 # JS
 
 - Import JSON
+    - JSON name, why, desc, pic
 - Create keys from data
 
 - Greensock integration
 - Vue integration possibly
 
+# Resources
+> Grid
+    > https://learncssgrid.com/#grid-container
+> Nice Title Background
+    > https://www.sliderrevolution.com/resources/css-animated-background/
+    > https://developer.mozilla.org/en-US/docs/Web/CSS/animation

@@ -1,0 +1,32 @@
+#candH {
+background-color: orange;
+background-image: url("../../images/candH.jpg");
+background-size: cover;
+}
+
+#sciFi {
+    background-color: red;
+    background-image: url("../../images/sciFi.jpg");
+background-size: cover;
+}
+
+#jackBlack {
+    background-color: brown;
+    background-image: url("../../images/jackBlack.jpg");
+background-size: cover;
+}
+
+
+.card {
+// padding: 10em 2em;
+height: 75%;
+width: 75%;
+border-radius: 1em;
+}
+
+.card:hover {
+    cursor: pointer;
+    height: 80%;
+    width: 80%;
+    animation: 1s;
+}

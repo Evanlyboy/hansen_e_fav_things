@@ -1,0 +1,21 @@
+{
+    "candH": {
+        "name": "Calvin and Hobbes",
+        "why": "Childhood book",
+        "desc": "Better than Garfield",
+        "pic": "candH.jpg"
+    },
+    "sciFi": {
+        "name": "Sci-Fi",
+        "why": "Inspires me",
+        "desc": "Favourites include Outer Wilds, Prey, Ghost in the Shell, Ratchet & Clank, The Iron Giant, and anything with giant fighting robots",
+        "pic": "sciFi.jpg"
+    },
+    "jackBlack": {
+        "name": "Jack Black",
+        "why": "He is very cool",
+        "desc": "Probably the best actor to grace us with his presence",
+        "pic": "jackBlack.jpg"
+
+    }
+}

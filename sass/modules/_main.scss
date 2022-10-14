@@ -1,0 +1,12 @@
+body {
+    background-color: #181123;
+}
+
+#mainCards {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    height: 100vh;
+    justify-items: center;
+    align-items: center;
+    background-color: rgb(27, 28, 31);
+}

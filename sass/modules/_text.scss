@@ -1,0 +1,32 @@
+a {
+    font-family: 'Bebas Neue', cursive;
+    font-size: 3em;
+    color: #f3f1dc;
+}
+
+h1 {
+    display: block;
+    text-align: center;
+    font-family: 'Bebas Neue', cursive;
+    font-size: 10em;
+    
+    // Linear Gradient
+    background: linear-gradient(-75deg, #fb5c2c, #a03ce7);
+    background-clip: #181123;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 200% 200%;
+    animation: gradient 10s ease infinite;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
