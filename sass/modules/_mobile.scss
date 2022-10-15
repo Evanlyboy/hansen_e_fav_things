@@ -4,6 +4,10 @@
         background-color: none;
     }
     
+    .title {
+        background-color: transparent;
+    }
+
     #mainCards {
         display: grid;
         grid-template-rows: 1fr 1fr 1fr;
@@ -11,7 +15,6 @@
         height: 90vh;
         justify-items: center;
         align-items: center;
-        background-color: #181123;
     }
     
     .hidden {

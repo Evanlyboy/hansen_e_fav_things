@@ -1,8 +1,13 @@
 body {
-    background-color: #181123;
+        // Linear Gradient
+        background: linear-gradient(30deg, #482b08, #110b2e, #13172b, #210538);
+        background-size: 400% 400%;
+        animation: gradient 15s ease infinite;
 }
-footer {
-    background-color: rgb(27, 28, 31);
+
+.title {
+    background-color: #181123;
+    padding: .5em;
 }
 
 #page {
@@ -15,11 +20,6 @@ footer {
     height: 90vh;
     justify-items: center;
     align-items: center;
-    
-    // Linear Gradient
-    background: linear-gradient(30deg, #482b08, #110b2e, #13172b, #210538);
-    background-size: 400% 400%;
-    animation: gradient 15s ease infinite;
 }
 
 .hidden {
