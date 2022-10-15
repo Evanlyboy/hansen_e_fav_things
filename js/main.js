@@ -43,7 +43,7 @@ import { getData } from "./modules/dataMiner.js";
             cardDisplay.appendChild(panel);
 
             // change the background
-            document.querySelector(`#${objectID}`).style.backgroundImage = `url(../images/${objectID}.jpg)`;
+            document.querySelector(`#${objectID}`).style.backgroundImage = `url(images/${objectID}.jpg)`;
         })
     }
 
