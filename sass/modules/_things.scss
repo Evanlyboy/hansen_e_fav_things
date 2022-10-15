@@ -2,6 +2,7 @@
 background-color: orange;
 background-image: url("../../images/candH.jpg");
 background-size: cover;
+
 }
 
 #sciFi {
@@ -22,11 +23,28 @@ background-size: cover;
 height: 75%;
 width: 75%;
 border-radius: 1em;
+transition: .25s;
+
 }
 
 .card:hover {
     cursor: pointer;
     height: 80%;
     width: 80%;
-    animation: 1s;
+}
+
+.card img {
+    size: cover;
+    max-width: 50%;
+}
+
+.blur {
+    height: 100%;
+    z-index: 9;
+    transition: .25s;
+    backdrop-filter: blur(5px);
+}
+
+.blur:hover {
+    backdrop-filter: blur(0px);
 }

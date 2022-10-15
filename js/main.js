@@ -9,10 +9,6 @@ import { getData } from "./modules/dataMiner.js";
     let cardTemplate = document.querySelector("#cardTemplate").content,
         cardDisplay = document.querySelector('#mainCards');
 
-    let buttonCalvin = document.querySelector("#candH");
-    let buttonSci = document.querySelector("#sciFi");
-    let buttonJack = document.querySelector("#jackBlack");
-
     // Functions
 
     function getJSONData (favThings) {
@@ -20,51 +16,56 @@ import { getData } from "./modules/dataMiner.js";
 
         let favThingsObj = Object.keys(favThings);
 
-        console.log(favThingsObj);
-
-        debugger;
         favThingsObj.forEach(objectID => {
-            debugger;
             // make a copy of the contents of the template tag
             let panel = cardTemplate.cloneNode(true),
             cardContainers = panel.firstElementChild.children; // the section tag's contents
 
-            let cardID = cardContainers[0].setAttribute("id", objectID);
+            // fuckin finally this works
+            panel.firstElementChild.id = objectID;
 
-            // cardImage.src = `images/${favThings[objectID].pic}`;
+            let cardImage = cardContainers[0].querySelector('img');
 
-            // cardImage.dataset.key = objectID;
+            cardImage.dataset.key = objectID;
+
+            cardImage.src = `images/${favThings[objectID].pic}`;
+            
+            panel.firstElementChild.addEventListener('click',function(prof) {
+                flipCard(favThings[objectID]);
+            })
+            panel.firstElementChild.addEventListener('mouseover',function() {
+                hoverCard();
+            })
+            console.log(favThings[objectID])
 
             // cardImage.addEventListener('click',function(objectID) {
             //     createLightBoxContent(profs[prof.target.dataset.key]);
             // })
 
             cardContainers[1].textContent = favThings[objectID].name;
-            cardContainers[2].textContent = favThings[objectID].role;
+            cardContainers[2].textContent = favThings[objectID].why;
+            cardContainers[3].textContent = favThings[objectID].desc;
 
-            debugger;
+            // debugger;
             // paste the prof 
             cardDisplay.appendChild(panel);
-            
         })
 
+    //Buttons
+    let buttonCard = document.querySelector(".card");
     }
 
     function hoverCard() {
-        gsap.to(".card", {x: 100})
+        console.log("card hovered upon");
+
     }
 
     function flipCard(favThing) {
+        console.log("card flipped");
+
+        // On click, we make the background white, and then make a toggle for the hidden classes.
+        
     }
 
-
-
     getData(`./data.json`, getJSONData);
-
-    // "Buttons"
-    buttonCalvin.addEventListener("click", flipCard("candH"));
-    buttonSci.addEventListener("click", flipCard("Sci"));
-    buttonJack.addEventListener("click", flipCard("Jack"));
-
-    buttonCalvin.addEventListener("hover", hoverCard());
 })();

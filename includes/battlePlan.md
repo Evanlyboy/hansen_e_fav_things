@@ -30,3 +30,6 @@
 > Nice Title Background
     > https://www.sliderrevolution.com/resources/css-animated-background/
     > https://developer.mozilla.org/en-US/docs/Web/CSS/animation
+    > https://css-tricks.com/css-hover-effects-background-masks-3d/
+> JS BS
+    > https://stackoverflow.com/questions/26107125/cannot-read-property-addeventlistener-of-null
