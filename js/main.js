@@ -19,18 +19,9 @@ import { getData } from "./modules/dataMiner.js";
         favThingsObj.forEach(objectID => {
             // make a copy of the contents of the template tag
             let panel = cardTemplate.cloneNode(true),
-            cardContainers = panel.firstElementChild.children; // the section tag's contents
-
+            cardContainers = panel.firstElementChild.children;
             // fuckin finally this works
             panel.firstElementChild.id = objectID;
-
-            // document.querySelector(`#${objectID}`).background-image = "url(../../images/candH.jpg")";
-
-            // let cardImage = cardContainers[0].querySelector('img');
-
-            // cardImage.dataset.key = objectID;
-
-            // cardImage.src = `images/${favThings[objectID].pic}`;
             
             panel.firstElementChild.addEventListener('click',function(prof) {
                 flipCard(objectID);
@@ -51,6 +42,14 @@ import { getData } from "./modules/dataMiner.js";
             // debugger;
             // paste the prof 
             cardDisplay.appendChild(panel);
+
+            let grop = document.querySelector(`div.cardTemplate > *:nth-child(1)`);
+            console.log("this is the nth child", grop);
+
+            document.querySelector(`#${objectID}`).style.backgroundImage = `url(../../images/${objectID}.jpg)`;
+
+            let htmlIDTag = document.querySelector(`#${objectID}`); // the section tag's contents
+            console.log("this is the htmlIDtag", htmlIDTag)
         })
 
     //Buttons
