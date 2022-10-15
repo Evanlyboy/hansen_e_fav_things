@@ -10,9 +10,9 @@
 
     #mainCards {
         display: grid;
-        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-rows: minmax(1fr, 600px);
         grid-template-columns: auto;
-        height: 90vh;
+        height: 100vh;
         justify-items: center;
         align-items: center;
     }
@@ -25,16 +25,30 @@
     // Text
     a {
         font-family: 'Bebas Neue', cursive;
-        font-size: 4em;
+        font-size: 3em;
         color: #f3f1dc;
         filter: drop-shadow(3px 3px 1px black);
+    }
+
+    p {
+        font-family: 'Bebas Neue', cursive;
+        font-size: 1em;
+        color: #f3f1dc;
+        filter: drop-shadow(3px 3px 1px black); 
+    }
+    
+    h3 {
+        display: block;
+        text-align: center;
+        font-family: 'Courgette', cursive;
+        font-size: 2em;
     }
     
     h1 {
         display: block;
         text-align: center;
         font-family: 'Bebas Neue', cursive;
-        font-size: 5em;
+        font-size: 4em;
     
         // Linear Gradient
         background: linear-gradient(-75deg, #fb5c2c, #a03ce7);
@@ -43,4 +57,5 @@
         background-size: 200% 200%;
         animation: gradient 3s ease infinite;
     }
+    
 }
