@@ -7,8 +7,7 @@ import { getData } from "./modules/dataMiner.js";
 
     // Variables
     let cardTemplate = document.querySelector("#cardTemplate").content,
-        cardDisplay = document.querySelector('#mainCards'),
-        flippedCard = false;
+        cardDisplay = document.querySelector('#mainCards');
 
     // Functions
 
@@ -53,7 +52,7 @@ import { getData } from "./modules/dataMiner.js";
     }
 
     function hoverCard() {
-        console.log("card hovered upon");
+        // console.log("card hovered upon");
     }
 
     function flipCard(favThing) {
@@ -62,29 +61,39 @@ import { getData } from "./modules/dataMiner.js";
         gsap.to(`#${favThing}`, {y:50, duration: 0.1,})
         gsap.to(`#${favThing}`, {y:0, duration: 0.1, delay:0.1,})
 
-        if(flippedCard === false) {
-            flippedCard = true;
+        // We are seeing if there are any classes with cardHide inside our card
+        let cardIdentifier = document.querySelector(`#${favThing}`);
+        let classAdder = cardIdentifier.querySelectorAll(".cardHide");
+        let classRemover = cardIdentifier.querySelectorAll(".cardInfo");
+
+        // if there is, we must add the info we have to the card
+        if(classAdder.length > 1) {
             console.log("card flipped to true");
-            console.log("this is the favthing", favThing);
+            // console.log("this is the favthing", favThing);
 
             // Data Editing
-            let cardIdentifier = document.querySelector(`#${favThing}`);
-            let classAdder = cardIdentifier.querySelectorAll(".cardHide");
+
             classAdder.forEach(classAdder => {
                 classAdder.classList.add('cardInfo');
                 classAdder.classList.remove('cardHide');
-                document.querySelector('.cardInfo').style.display = "inline";
             })
 
-            
+            cardIdentifier.querySelector('.card').style.backgroundColor = "black";
+            cardIdentifier.querySelector('.card').style.opacity = "0.80";
 
 
             console.log(classAdder);
         } else {
-            flippedCard = false;
             console.log("card flipped to false");
 
+            // It's skipping over this because there isn't anything in the ClassAdder
+            classRemover.forEach(classRemover => {
+                classRemover.classList.add('cardHide');
+                classRemover.classList.remove('cardInfo');
+            })
 
+            cardIdentifier.querySelector('.card').style.backgroundColor = "transparent";
+            cardIdentifier.querySelector('.card').style.opacity = "1";
 
         }
         
