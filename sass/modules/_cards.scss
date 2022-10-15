@@ -1,0 +1,80 @@
+#candH {
+background-size: cover;
+background-position: center;
+}
+
+#sciFi {
+background-size: cover;
+background-position: center;
+}
+
+#jackBlack {
+background-size: cover;
+background-position: center;
+}
+
+.card{
+    display: grid;
+    // background-color: black;
+    // opacity: 80%;
+    padding: 1em;
+    align-items: center;
+    justify-items: center;
+    height: 100%;
+    backdrop-filter: blur(8px);
+    border-radius: 1em;
+    transition: .25s;
+}
+
+.card:hover{
+    backdrop-filter: blur(0px);
+}
+
+.cardHide {
+    display: none;
+}
+
+.cardInfo {
+    display: flex;
+    color: white;
+    filter: drop-shadow(3px 3px 1px black);
+}
+
+.container {
+// padding: 10em 2em;
+height: 75%;
+width: 75%;
+border-radius: 1em;
+transition: .25s;
+text-align: center;
+vertical-align: middle;
+}
+
+.container:hover {
+    cursor: pointer;
+    height: 80%;
+    width: 80%;
+}
+
+.container img {
+    object-fit: cover;
+    max-width: 100%;
+}
+
+.cardText {
+    display: flex;
+    
+
+}
+
+.blur {
+    height: 100%;
+    position: relative;
+    z-index: 9;
+    transition: .25s;
+    backdrop-filter: blur(5px);
+}
+
+.blur:hover {
+    backdrop-filter: blur(0px);
+}

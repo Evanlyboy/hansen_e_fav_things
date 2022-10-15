@@ -1,0 +1,28 @@
+body {
+        // Linear Gradient
+        background: linear-gradient(30deg, #482b08, #110b2e, #13172b, #210538);
+        background-size: 400% 400%;
+        animation: gradient 15s ease infinite;
+}
+
+.title {
+    background-color: #181123;
+    padding: .5em;
+}
+
+#page {
+    height: 100vh;
+}
+
+#mainCards {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    height: 90vh;
+    justify-items: center;
+    align-items: center;
+}
+
+.hidden {
+    display: none;
+    position: relative;
+}

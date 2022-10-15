@@ -4,9 +4,48 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Courgette&display=swap" rel="stylesheet">
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/main.css">
+    
     <title>Evan's Favourite Things</title>
 </head>
 <body>
     
+    <main id="page">
+        <div class="title">
+            <h1>Evan's Favourite Things</h1>
+        </div>
+
+        <section id="mainCards">
+            <h2 class="hidden">main cards</h2>
+
+        </section>
+
+        <!-- A template for the actual card we will display -->
+        <template id="cardTemplate">
+        <div class="container">
+            <!-- card -->
+            <div class="card">
+                    <!-- top pic -->
+                    <div>
+                    </div>
+                    <!-- title -->
+                    <a></a>
+                    <!-- why -->
+                    <h3 class="cardHide">Why?</h3>
+                    <p class="cardHide"></p>
+                    <!-- desc -->
+                    <p class="cardHide"></p>
+            </div>
+        </div>
+        </template>
+
+    </main>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
+    <script src="js/main.js"  type="module"></script>
 </body>
 </html>
