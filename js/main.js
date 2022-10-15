@@ -24,14 +24,16 @@ import { getData } from "./modules/dataMiner.js";
             // fuckin finally this works
             panel.firstElementChild.id = objectID;
 
-            let cardImage = cardContainers[0].querySelector('img');
+            // document.querySelector(`#${objectID}`).background-image = "url(../../images/candH.jpg")";
 
-            cardImage.dataset.key = objectID;
+            // let cardImage = cardContainers[0].querySelector('img');
 
-            cardImage.src = `images/${favThings[objectID].pic}`;
+            // cardImage.dataset.key = objectID;
+
+            // cardImage.src = `images/${favThings[objectID].pic}`;
             
             panel.firstElementChild.addEventListener('click',function(prof) {
-                flipCard(favThings[objectID]);
+                flipCard(objectID);
             })
             panel.firstElementChild.addEventListener('mouseover',function() {
                 hoverCard();
@@ -62,7 +64,13 @@ import { getData } from "./modules/dataMiner.js";
 
     function flipCard(favThing) {
         console.log("card flipped");
+        console.log(favThing);
 
+        let cardData = document.querySelector(`#${favThing}`),
+        bingus = cardData.children,
+        scrongle = bingus[2,3].classList;
+        console.log(cardData);
+        console.log(bingus, scrongle);
         // On click, we make the background white, and then make a toggle for the hidden classes.
         
     }
