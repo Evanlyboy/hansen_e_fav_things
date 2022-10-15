@@ -2,7 +2,7 @@ a {
     font-family: 'Bebas Neue', cursive;
     font-size: 3em;
     color: #f3f1dc;
-    z-index: 1;
+    filter: drop-shadow(3px 3px 1px black);
 }
 
 h1 {

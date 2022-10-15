@@ -14,7 +14,35 @@ background-color: brown;
 background-size: cover;
 }
 
-.card {
+.card{
+    display: grid;
+    // background-color: black;
+    // opacity: 80%;
+    align-items: center;
+    justify-items: center;
+    height: 100%;
+    backdrop-filter: blur(8px);
+    border-radius: 1em;
+    transition: .25s;
+}
+
+.card:hover{
+    backdrop-filter: blur(0px);
+}
+
+.cardHide {
+    display: none;
+}
+
+.cardInfo {
+    display: flex;
+    font-family: 'Bebas Neue', cursive;
+    font-size: 2em;
+    color: white;
+    filter: drop-shadow(3px 3px 1px black);
+}
+
+.container {
 // padding: 10em 2em;
 height: 75%;
 width: 75%;
@@ -24,13 +52,13 @@ text-align: center;
 vertical-align: middle;
 }
 
-.card:hover {
+.container:hover {
     cursor: pointer;
     height: 80%;
     width: 80%;
 }
 
-.card img {
+.container img {
     object-fit: cover;
     max-width: 100%;
 }

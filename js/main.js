@@ -7,7 +7,8 @@ import { getData } from "./modules/dataMiner.js";
 
     // Variables
     let cardTemplate = document.querySelector("#cardTemplate").content,
-        cardDisplay = document.querySelector('#mainCards');
+        cardDisplay = document.querySelector('#mainCards'),
+        flippedCard = false;
 
     // Functions
 
@@ -17,9 +18,10 @@ import { getData } from "./modules/dataMiner.js";
         let favThingsObj = Object.keys(favThings);
 
         favThingsObj.forEach(objectID => {
-            // make a copy of the contents of the template tag
+            // admittedly, this is stupid but it works
             let panel = cardTemplate.cloneNode(true),
-            cardContainers = panel.firstElementChild.children;
+            cardContainer = panel.firstElementChild,
+            cardStuff = cardContainer.firstElementChild.children;
             // fuckin finally this works
             panel.firstElementChild.id = objectID;
             
@@ -30,22 +32,16 @@ import { getData } from "./modules/dataMiner.js";
                 hoverCard();
             })
             console.log(favThings[objectID])
+            console.log(cardStuff)
 
-            // cardImage.addEventListener('click',function(objectID) {
-            //     createLightBoxContent(profs[prof.target.dataset.key]);
-            // })
+            cardStuff[1].textContent = favThings[objectID].name;
+            cardStuff[2].textContent = favThings[objectID].why;
+            cardStuff[3].textContent = favThings[objectID].desc;
 
-            cardContainers[1].textContent = favThings[objectID].name;
-            cardContainers[2].textContent = favThings[objectID].why;
-            cardContainers[3].textContent = favThings[objectID].desc;
-
-            // debugger;
-            // paste the prof 
+            // add the completed element to the page
             cardDisplay.appendChild(panel);
 
-            let grop = document.querySelector(`div.cardTemplate > *:nth-child(1)`);
-            console.log("this is the nth child", grop);
-
+            // change the background
             document.querySelector(`#${objectID}`).style.backgroundImage = `url(../../images/${objectID}.jpg)`;
 
             let htmlIDTag = document.querySelector(`#${objectID}`); // the section tag's contents
@@ -58,18 +54,45 @@ import { getData } from "./modules/dataMiner.js";
 
     function hoverCard() {
         console.log("card hovered upon");
-
     }
 
     function flipCard(favThing) {
-        console.log("card flipped");
-        console.log(favThing);
 
-        let cardData = document.querySelector(`#${favThing}`),
-        bingus = cardData.children,
-        scrongle = bingus[2,3].classList;
-        console.log(cardData);
-        console.log(bingus, scrongle);
+        // Simple gsap animation
+        gsap.to(`#${favThing}`, {y:50, duration: 0.1,})
+        gsap.to(`#${favThing}`, {y:0, duration: 0.1, delay:0.1,})
+
+        if(flippedCard === false) {
+            flippedCard = true;
+            console.log("card flipped to true");
+            console.log("this is the favthing", favThing);
+
+            // Data Editing
+            let cardIdentifier = document.querySelector(`#${favThing}`);
+            let classAdder = cardIdentifier.querySelectorAll(".cardHide");
+            classAdder.forEach(classAdder => {
+                classAdder.classList.add('cardInfo');
+                classAdder.classList.remove('cardHide');
+                document.querySelector('.cardInfo').style.display = "inline";
+            })
+
+            
+
+
+            console.log(classAdder);
+        } else {
+            flippedCard = false;
+            console.log("card flipped to false");
+
+
+
+        }
+        
+
+        // bingus = cardData.children,
+        // scrongle = bingus[2,3].classList;
+        // console.log(cardData);
+        // console.log(bingus, scrongle);
         // On click, we make the background white, and then make a toggle for the hidden classes.
         
     }
