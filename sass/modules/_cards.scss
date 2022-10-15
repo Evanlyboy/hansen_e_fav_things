@@ -1,23 +1,23 @@
 #candH {
-background-color: orange;
 background-size: cover;
-
+background-position: center;
 }
 
 #sciFi {
-background-color: red;
 background-size: cover;
+background-position: center;
 }
 
 #jackBlack {
-background-color: transparent;
 background-size: cover;
+background-position: center;
 }
 
 .card{
     display: grid;
     // background-color: black;
     // opacity: 80%;
+    padding: 1em;
     align-items: center;
     justify-items: center;
     height: 100%;
@@ -36,8 +36,6 @@ background-size: cover;
 
 .cardInfo {
     display: flex;
-    font-family: 'Bebas Neue', cursive;
-    font-size: 2em;
     color: white;
     filter: drop-shadow(3px 3px 1px black);
 }

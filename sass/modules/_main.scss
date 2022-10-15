@@ -1,18 +1,28 @@
 body {
     background-color: #181123;
 }
+footer {
+    background-color: rgb(27, 28, 31);
+}
+
+#page {
+    height: 100vh;
+}
 
 #mainCards {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    height: 100vh;
+    height: 90vh;
     justify-items: center;
     align-items: center;
-    background-color: rgb(27, 28, 31);
+    
+    // Linear Gradient
+    background: linear-gradient(30deg, #482b08, #110b2e, #13172b, #210538);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
 }
 
 .hidden {
     display: none;
     position: relative;
-    z-index: 1;
 }

@@ -1,13 +1,13 @@
 {
     "candH": {
         "name": "Calvin and Hobbes",
-        "why": "Childhood book",
-        "desc": "Better than Garfield",
+        "why": "It influenced me to be who I am today",
+        "desc": "A timeless legendary comic that never sold out and is certifiably better than Garfield",
         "pic": "candH.jpg"
     },
     "sciFi": {
         "name": "Sci-Fi",
-        "why": "Inspires me",
+        "why": "Good Sci-Fi inspires me to dream big and look to the future",
         "desc": "Favourites include Outer Wilds, Prey, Ghost in the Shell, Ratchet & Clank, The Iron Giant, and anything with giant fighting robots",
         "pic": "sciFi.jpg"
     },

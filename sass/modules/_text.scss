@@ -1,8 +1,22 @@
 a {
     font-family: 'Bebas Neue', cursive;
-    font-size: 3em;
+    font-size: 4em;
     color: #f3f1dc;
     filter: drop-shadow(3px 3px 1px black);
+}
+
+p {
+    font-family: 'Bebas Neue', cursive;
+    font-size: 2em;
+    color: #f3f1dc;
+    filter: drop-shadow(3px 3px 1px black); 
+}
+
+h3 {
+    display: block;
+    text-align: center;
+    font-family: 'Courgette', cursive;
+    font-size: 3em;
 }
 
 h1 {
@@ -10,10 +24,10 @@ h1 {
     text-align: center;
     font-family: 'Bebas Neue', cursive;
     font-size: 10em;
+    position: sticky;
 
     // Linear Gradient
     background: linear-gradient(-75deg, #fb5c2c, #a03ce7);
-    background-clip: #181123;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-size: 200% 200%;
