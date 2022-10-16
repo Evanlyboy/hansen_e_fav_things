@@ -59,3 +59,65 @@
     }
     
 }
+
+@media screen and (max-width: 1440px)  {
+    // Skeleton
+    body {
+        background-color: none;
+    }
+    
+    .title {
+        background-color: transparent;
+    }
+
+    #mainCards {
+        display: grid;
+        grid-template-rows: minmax(1fr, 600px);
+        grid-template-columns: auto;
+        height: 100vh;
+        justify-items: center;
+        align-items: center;
+    }
+    
+    .hidden {
+        display: none;
+        position: relative;
+    }
+
+    // Text
+    a {
+        font-family: 'Bebas Neue', cursive;
+        font-size: 3em;
+        color: #f3f1dc;
+        filter: drop-shadow(3px 3px 1px black);
+    }
+
+    p {
+        font-family: 'Bebas Neue', cursive;
+        font-size: 1.5em;
+        color: #f3f1dc;
+        filter: drop-shadow(3px 3px 1px black); 
+    }
+    
+    h3 {
+        display: block;
+        text-align: center;
+        font-family: 'Courgette', cursive;
+        font-size: 2em;
+    }
+    
+    h1 {
+        display: block;
+        text-align: center;
+        font-family: 'Bebas Neue', cursive;
+        font-size: 4em;
+    
+        // Linear Gradient
+        background: linear-gradient(-75deg, #fb5c2c, #a03ce7);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-size: 200% 200%;
+        animation: gradient 3s ease infinite;
+    }
+    
+}
